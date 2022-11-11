@@ -1,5 +1,5 @@
 # Designer Doggies
-
+![Home page of designer dogs](designer-doggies.png)
 ---
 
 ## Getting Started

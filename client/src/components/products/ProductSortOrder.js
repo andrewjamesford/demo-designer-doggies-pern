@@ -7,7 +7,6 @@ const ProductSortOrder = ({ onSortChange, onOrderChange }) => {
           id="productSort"
           name="productSort"
           className="select"
-          placeholder="Sort"
           onChange={onSortChange}
         >
           <option value="name">Name</option>
