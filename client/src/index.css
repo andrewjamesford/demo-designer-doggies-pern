@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+.main-content {
+  flex-grow: 2;
+}
+.main-layout {
+  padding: 0 3rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.narrow-layout > * {
+  max-width: 627px;
+}
+.main-layout > *,
+.narrow-layout > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.section-padding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.grid {
+  display: grid;
+  list-style: none;
+  padding-left: 0;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+.app > * {
+  flex-shrink: 0;
+}
+.errorMessage {
+  padding: 0.5rem;
+  color: #ffffff;
+  background-color: #a60e0e;
+}
+.footer {
+  width: 100%;
+  align-self: flex-end;
+  background-color: #eeeeee;
+  display: flex;
+}
+.footerItem {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin: 0;
+
+  color: black;
+}
+.nav {
+  width: 100%;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+}
+.navButton {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.menu {
+  display: flex;
+}
+.rightLinks {
+  display: flex;
+}
+.rightLinkItems {
+  list-style-type: none;
+}
+
+.link {
+  color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.activeLink {
+  color: #a60e0e;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.header .logo {
+  font-size: 3rem;
+  margin: 2rem 0rem;
+}
+.product {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.product-description {
+  min-height: 2.5rem;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.button {
+  background-color: black;
+  color: white;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0.5rem;
+  font-weight: 800;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  width: 100%;
+  max-width: 200px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.discountBadge {
+  padding: 0.5rem;
+}
+.container {
+  width: auto;
+  overflow: scroll;
+}
+
+.table {
+  color: #333333;
+  background: #ffffff;
+  border: 1px solid grey;
+  border-collapse: collapse;
+  width: 100%;
+}
+.tableCell {
+  padding: 0.5em;
+  border: 1px solid lightgrey;
+}
+.tableHeaderCell {
+  padding: 0.5em;
+  border: 1px solid lightgrey;
+  color: #000000;
+  background: rgba(0, 0, 0, 0.1);
+}
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+.product-sortOrder {
+  display: grid;
+  gap: 1rem;
+}
+.select {
+  padding: 0.5rem;
+}
+.labelSelect {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media only screen and (min-width: 35rem) {
+  .half-width {
+    max-width: 672px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .product-sortOrder {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+.left-align {
+  text-align: left;
+}
+.right-align {
+  text-align: right;
+}
