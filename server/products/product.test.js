@@ -13,15 +13,9 @@ describe("GIVEN that the GET /products route exist", () => {
   });
 
   test("WHEN there are products THEN return status 200 and an array of products", async () => {
-    const totalProducts = await productRepository.getTotalProducts();
-    const defaultLimit = 10;
 
     const expectedResponseData = {
-      products: await productRepository.getProducts(defaultLimit, 1),
-      currentPage: 1,
-      totalPages: Math.ceil(parseInt(totalProducts) / defaultLimit),
-      itemsPerPage: defaultLimit,
-      totalItems: totalProducts,
+      products: await productRepository.getProducts("", "")
     };
 
     const response = await request(app)
