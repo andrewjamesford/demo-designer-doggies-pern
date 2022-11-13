@@ -1,6 +1,6 @@
 # Designer Doggies
-![Home page of designer dogs](designer-doggies.png)
----
+
+## ![Home page of designer dogs](designer-doggies.png)
 
 ## Getting Started
 
@@ -25,5 +25,21 @@ cd client
 npm install
 npm test
 ```
+
+---
+
+## Debugging with VS Code integration
+
+We need to ensure the JavaScript Debugger plugin is installed.
+
+[JavaScript Debugger](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug)
+
+---
+
+## Jest test runner integration with VS Code
+
+To enable the VS Code integration with the Jest test runner open the Client folder directly for the project. The default configuration will work this way with the locally installed node modules.
+
+Also ensure you have the Jest test runner plugin installed. [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 
 ---
