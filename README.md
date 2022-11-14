@@ -1,45 +1,23 @@
 # Designer Doggies
 
-## ![Home page of designer dogs](designer-doggies.png)
+A demonstration of a monorepo full stack web application.
+
+![Home page of designer dogs](designer-doggies.png)
+
+---
 
 ## Getting Started
 
 **To run the app:**
+Open the project in VS Code and open via the workspace file
+Open the command prompt and select "File: Open Workspace from File..."
 
-```zsh
-docker-compose up --build
-```
+This may ask you to install plugins for VS Code, follow the prompts and install the suggestions.
 
-**To run the server-side tests:**
+Once that has loaded run the docker up command via right clicking on the `docker-compose.yml` file in the "ROOT" folder and select "Compose Up"
 
-```zsh
-docker-compose -f docker-compose.test.yml up --build
-```
+You can debug the client by running the task "Chrome (Client)" this will allow you to place breakpoints in your client code.
 
-<sup>Note: You will notices that some of the tests will fail. This is intentional.</sup>
-
-**To run the client-side tests:**
-
-```zsh
-cd client
-npm install
-npm test
-```
-
----
-
-## Debugging with VS Code integration
-
-We need to ensure the JavaScript Debugger plugin is installed.
-
-[JavaScript Debugger](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug)
-
----
-
-## Jest test runner integration with VS Code
-
-To enable the VS Code integration with the Jest test runner open the Client folder directly for the project. The default configuration will work this way with the locally installed node modules.
-
-Also ensure you have the Jest test runner plugin installed. [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+You can debug the server by running the task "Docker: Attach to Node (Server)" this also will allow you to place breakpoints in your server code.
 
 ---

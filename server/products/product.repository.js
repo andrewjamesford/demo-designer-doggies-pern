@@ -21,7 +21,7 @@ module.exports = {
       if (direction.toLowerCase() === "desc") {
         sortOrderParam = sortOrderParam + " DESC";
       }
-      console.log(sortOrderParam);
+
       const result = await db.query(
         `SELECT
           p.id,

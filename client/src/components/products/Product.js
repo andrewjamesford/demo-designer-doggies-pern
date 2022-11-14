@@ -21,8 +21,8 @@ const Product = ({
             />
           ) : (
             <img
-              src="./img/cat-photo-default.jpg"
-              alt="Default product cat"
+              src="./img/dog-photo-default.png"
+              alt="Default product dog"
               className="product-image"
             />
           )}
@@ -36,7 +36,9 @@ const Product = ({
         </div>
         <h3>{name}</h3>
         <p>Price {price}</p>
-        <p data-testid="product-description" className="product-description">{description}</p>
+        <p data-testid="product-description" className="product-description">
+          {description}
+        </p>
         <button className="button">Add to Cart</button>
       </div>
     </li>
