@@ -13,7 +13,8 @@ const pool = new Pool({
       }
     : false,
 });
-
+const connectionString = process.env.DATABASE_URL;
+console.log(connectionString);
 module.exports = {
   query: (text, params, callback) => {
     return pool.query(text, params, callback);
