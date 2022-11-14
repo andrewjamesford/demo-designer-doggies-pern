@@ -5,23 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "address": "TCP/IP address of process to be debugged",
-            "localRoot": "${workspaceFolder}",
-            "name": "Attach to Remote",
-            "port": 9229,
-            "remoteRoot": "Absolute path to the remote directory containing the program",
+            "name": "Docker: Attach to Node",
+            "type": "node",
             "request": "attach",
+            "restart": true,
+            "port": 9229,
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/app", // See the dockerfile for this location
             "skipFiles": [
                 "<node_internals>/**"
-            ],
-            "type": "node"
-        },
-        {
-            "name": "Docker Node.js Launch",
-            "type": "docker",
-            "request": "launch",
-            "preLaunchTask": "docker-run: debug",
-            "platform": "node"
-        }
+            ]
+          }
     ]
 }
