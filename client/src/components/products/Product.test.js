@@ -41,7 +41,7 @@ describe("Product", () => {
         discountValue={null}
       />
     );
-    expect(screen.getByAltText("Default product cat")).toBeInTheDocument();
+    expect(screen.getByAltText("Default product dog")).toBeInTheDocument();
   });
 
   test("Renders a product with no discount", () => {
