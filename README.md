@@ -1,6 +1,6 @@
 # Designer Doggies
 
-A demonstration of a monorepo full stack web application.
+A demonstration of a monorepo full stack web application built on the PERN (postgres, express, react and node) stack.
 
 ![Home page of designer dogs](designer-doggies.png)
 
