@@ -15,13 +15,13 @@ const Product = ({
         <div>
           {imageName ? (
             <img
-              src={`./img/${imageName}`}
+              src={`/img/${imageName}`}
               alt={imageDescription}
               className="product-image"
             />
           ) : (
             <img
-              src="./img/dog-photo-default.png"
+              src="/img/dog-photo-default.png"
               alt="Default product dog"
               className="product-image"
             />

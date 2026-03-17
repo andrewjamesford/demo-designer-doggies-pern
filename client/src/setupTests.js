@@ -3,11 +3,28 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
-import { server } from "./mocks/server.js";
-// Establish API mocking before all tests.
-beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
-// Reset any request handlers that we may add during the tests,
-// so they don't affect other tests.
-afterEach(() => server.resetHandlers());
-// Clean up after the tests are finished.
-afterAll(() => server.close());
+import { TextDecoder, TextEncoder } from "util";
+import { afterEach, vi } from "vitest";
+import { cleanup } from "@testing-library/react";
+
+globalThis.TextEncoder = TextEncoder;
+globalThis.TextDecoder = TextDecoder;
+globalThis.fetch = vi.fn(() => new Promise(() => {}));
+
+vi.mock("@auth0/auth0-react", () => ({
+  __esModule: true,
+  Auth0Provider: ({ children }) => children,
+  useAuth0: () => ({
+    isAuthenticated: false,
+    isLoading: false,
+    loginWithRedirect: vi.fn(),
+    logout: vi.fn(),
+  }),
+  withAuthenticationRequired: (Component) => Component,
+}));
+
+afterEach(() => {
+  cleanup();
+  vi.clearAllMocks();
+  globalThis.fetch = vi.fn(() => new Promise(() => {}));
+});

@@ -1,14 +1,12 @@
 import { render, screen } from "@testing-library/react";
-import { createMemoryHistory } from "history";
-import { Router } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import Header from "./Header";
 
 beforeEach(() => {
-  const history = createMemoryHistory();
   render(
-    <Router location={history.location} navigator={history}>
+    <MemoryRouter>
       <Header />
-    </Router>
+    </MemoryRouter>
   );
 });
 
