@@ -6,6 +6,16 @@ A demonstration of a monorepo full stack web application built on the PERN (post
 
 ---
 
+## Project Status
+
+🟢 **Current Status**: Stable and actively maintained  
+📅 **Last Updated**: July 28, 2025  
+🔧 **Maintenance**: Regular dependency updates via Dependabot  
+
+For detailed maintenance information and recommendations, see [MAINTENANCE.md](MAINTENANCE.md).
+
+---
+
 ## Getting Started
 
 **To run the app:**

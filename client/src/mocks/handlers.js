@@ -1,4 +1,4 @@
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 const productsPageOneMock = {
   products: [
@@ -60,17 +60,17 @@ const reportsMock = {
 };
 
 export const handlers = [
-  rest.get(`${process.env.REACT_APP_API_URL}/products`, (req, res, ctx) => {
-    const query = req.url.searchParams;
+  http.get(`${import.meta.env.VITE_API_URL}/products`, ({ request }) => {
+    const query = new URL(request.url).searchParams;
     const limit = query.get("limit");
     const page = query.get("page");
     if (!(limit && page) || page === "1") {
-      return res(ctx.json(productsPageOneMock));
+      return HttpResponse.json(productsPageOneMock);
     } else {
-      return res(ctx.json(productsPageTwoMock));
+      return HttpResponse.json(productsPageTwoMock);
     }
   }),
-  rest.get(`${process.env.REACT_APP_API_URL}/reports`, (req, res, ctx) => {
-    return res(ctx.json(reportsMock));
+  http.get(`${import.meta.env.VITE_API_URL}/reports`, () => {
+    return HttpResponse.json(reportsMock);
   }),
 ];
